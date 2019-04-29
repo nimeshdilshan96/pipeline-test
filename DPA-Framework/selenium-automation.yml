@@ -1,0 +1,37 @@
+version: 0.2
+
+phases:
+ install:
+   commands:
+     - apt-get update -y
+     - apt-get install -y software-properties-common
+     - add-apt-repository ppa:openjdk-r/ppa
+     - apt-get update -y
+     - apt-get install -y openjdk-8-jdk
+     - apt-get install wget
+ pre_build:
+   commands:
+     - echo $PATH
+     - which java
+     - wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+     - tar -xvzf apache-maven-3.6.0-bin.tar.gz
+     - mv apache-maven-3.6.0 /opt/maven
+     - export M2_HOME=/opt/maven
+     - export PATH=${M2_HOME}/bin:${PATH}
+     - echo $HOME
+     - update-ca-certificates -f
+     - which mvn
+ build:
+   commands:
+     - echo "Testing repo"
+     - mvn -v
+     - docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug
+     - docker ps
+     - cd qa-automation/ui/DPA-Framework
+     - mvn clean test 
+     - cp ./reports/index.html ./
+     - cat index.html
+artifacts:     
+  files: 
+    - qa-automation/ui/DPA-Framework/reports/index.html
+  name: reports

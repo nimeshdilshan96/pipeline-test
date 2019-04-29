@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18077" started-at="2019-03-27T07:50:55Z" finished-at="2019-03-27T07:51:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18077" started-at="2019-03-27T07:50:55Z" finished-at="2019-03-27T07:51:13Z">
+      <class name="testcases.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePageTest@1bce4f0a]" name="setup" is-config="true" duration-ms="17608" started-at="2019-03-27T07:50:55Z" finished-at="2019-03-27T07:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="check_docker_hub_title()[pri:0, instance:testcases.HomePageTest@1bce4f0a]" name="check_docker_hub_title" duration-ms="454" started-at="2019-03-27T07:51:13Z" finished-at="2019-03-27T07:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_docker_hub_title -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HomePageTest@1bce4f0a]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-03-27T07:51:13Z" finished-at="2019-03-27T07:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
