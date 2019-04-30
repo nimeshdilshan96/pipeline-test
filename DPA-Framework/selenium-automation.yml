@@ -27,7 +27,7 @@ phases:
      - mvn -v
      - docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug
      - docker ps
-     - cd pipeline-test/DPA-Framework
+     - cd ~/pipeline-test/DPA-Framework
      - mvn clean test 
      - cp ./reports/index.html ./
      - cat index.html
