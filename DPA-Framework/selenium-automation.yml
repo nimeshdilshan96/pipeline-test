@@ -27,7 +27,8 @@ phases:
      - mvn -v
      - docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug
      - docker ps
-     - cd $CODEBUILD_SRC_DIR
+     - ls -al
+     - cd $CODEBUILD_SRC_DIR/
      - mvn clean test 
      - cp ./reports/index.html ./
      - cat index.html
